@@ -9,7 +9,7 @@ using System.Windows.Input;
 
 namespace ChaisesMusicales
 {
-    public class SalleViewModel
+    public class SalleViewModel:IRandomize
     {
         private ListOfPredicateOnListViewModel predicates=new ListOfPredicateOnListViewModel();
         private SalleManager salleManager = new SalleManager();
@@ -29,7 +29,7 @@ namespace ChaisesMusicales
             }
         }
 
-        public void randomizeSalleExecute()
+        public void randomize()
         {
             IntListRandomizer randl = new IntListRandomizer();
             List<int> indexes = randl.mixNFirstIntegers(chaisesViewModel.Count,predicates.getListPredicates());
@@ -49,7 +49,7 @@ namespace ChaisesMusicales
 
         }
 
-        public ICommand RandomizeSalle { get { return new RelayCommand(randomizeSalleExecute, CanRandomizeSalleExecute); } }
+        public ICommand RandomizeSalle { get { return new RelayCommand(randomize, CanRandomizeSalleExecute); } }
 
         bool CanRandomizeSalleExecute()
         {
