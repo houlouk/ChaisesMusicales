@@ -4,9 +4,16 @@ using System.Linq;
 //test git
 namespace ChaisesMusicales
 {
-    internal class IntListRandomizer
+    internal class IntListRandomizer:IListRandomizer<int>
     {
-        internal List<int> mixNFirstIntegers(int N, List<IPredicateOnList<int>> predicates)
+        private int count;
+
+        public IntListRandomizer(int count)
+        {
+            this.count = count;
+        }
+
+        public List<int> randomizeList(List<IPredicateOnList<int>> predicates)
         {
             List<int> mixIntegers = new List<int>();
 
@@ -15,11 +22,11 @@ namespace ChaisesMusicales
 
             int v;
 
-            for (int i = 0; i < N; i++)
+            for (int i = 0; i < count; i++)
             {
                 do
                 {
-                    v = rnd.Next(0, N);
+                    v = rnd.Next(0, count);
                 }
                 //TO CHANGE
                 while (v == i || mixIntegers.Contains(v) || !predicates.TrueForAll(p => p.RealPredicate(mixIntegers.Concat(new List<int>() { v }).ToList())));
