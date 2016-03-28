@@ -1,7 +1,7 @@
 ﻿namespace ChaisesMusicales
 {
-    public interface IRandomize
+    public interface IRandomizeList
     {
-        void randomize();
+        void randomizeList();
     }
 }
