@@ -34,13 +34,17 @@ namespace ChaisesMusicales
             IntListRandomizer randl = new IntListRandomizer();
             List<int> indexes = randl.mixNFirstIntegers(chaisesViewModel.Count,predicates.getListPredicates());
             ObservableCollection<ChaiseViewModel> cvm = new ObservableCollection<ChaiseViewModel>();
-
             foreach (int i in indexes)
             {
                 cvm.Add(new ChaiseViewModel(chaisesViewModel[i].Chaise));
                 
             }
-            this.chaisesViewModel = cvm;
+           
+            this.chaisesViewModel.Clear();
+            foreach (ChaiseViewModel vm in cvm)
+                chaisesViewModel.Add(vm);
+
+            
 
 
         }
