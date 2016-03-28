@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChaisesConsole", "ChaisesCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChaisesMusicalesModel", "ChaisesMusicalesModel\ChaisesMusicalesModel.csproj", "{C0B8C303-2A5E-4ED8-A871-BA37E4CA8B5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMvvm", "..\MvvmExample\MicroMvvm\MicroMvvm.csproj", "{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChaisesMusicalesView", "ChaisesMusicalesView\ChaisesMusicalesView.csproj", "{D5D1CD1E-865B-49F8-8794-9CF97ED306F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroMvvm", "MicroMvvm\MicroMvvm.csproj", "{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,14 +35,6 @@ Global
 		{C0B8C303-2A5E-4ED8-A871-BA37E4CA8B5E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C0B8C303-2A5E-4ED8-A871-BA37E4CA8B5E}.Release|x86.ActiveCfg = Release|Any CPU
 		{C0B8C303-2A5E-4ED8-A871-BA37E4CA8B5E}.Release|x86.Build.0 = Release|Any CPU
-		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Debug|x86.Build.0 = Debug|Any CPU
-		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Release|x86.ActiveCfg = Release|Any CPU
-		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Release|x86.Build.0 = Release|Any CPU
 		{D5D1CD1E-865B-49F8-8794-9CF97ED306F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D5D1CD1E-865B-49F8-8794-9CF97ED306F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5D1CD1E-865B-49F8-8794-9CF97ED306F8}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -51,6 +43,14 @@ Global
 		{D5D1CD1E-865B-49F8-8794-9CF97ED306F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D5D1CD1E-865B-49F8-8794-9CF97ED306F8}.Release|x86.ActiveCfg = Release|Any CPU
 		{D5D1CD1E-865B-49F8-8794-9CF97ED306F8}.Release|x86.Build.0 = Release|Any CPU
+		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Debug|x86.Build.0 = Debug|Any CPU
+		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Release|x86.ActiveCfg = Release|Any CPU
+		{9EFE6CBD-DF21-436E-9F81-E258BAB0B653}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

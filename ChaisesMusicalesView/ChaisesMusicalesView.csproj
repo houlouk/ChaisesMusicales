@@ -101,13 +101,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\MvvmExample\MicroMvvm\MicroMvvm.csproj">
-      <Project>{9efe6cbd-df21-436e-9f81-e258bab0b653}</Project>
-      <Name>MicroMvvm</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ChaisesMusicalesModel\ChaisesMusicalesModel.csproj">
       <Project>{c0b8c303-2a5e-4ed8-a871-ba37e4ca8b5e}</Project>
       <Name>ChaisesMusicalesModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MicroMvvm\MicroMvvm.csproj">
+      <Project>{9efe6cbd-df21-436e-9f81-e258bab0b653}</Project>
+      <Name>MicroMvvm</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
