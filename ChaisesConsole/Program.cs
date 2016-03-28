@@ -13,7 +13,7 @@ namespace ChaisesConsole
         {
             SalleViewModel salle = new SalleViewModel();
             Console.Out.WriteLine(salle);
-            salle.randomizeSalleExecute();
+            salle.randomizeList();
             Console.Out.WriteLine(salle);
 
             Console.ReadKey();
