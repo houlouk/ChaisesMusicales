@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ChaisesMusicales
 {
-    class ListOfPredicateOnListViewModel
+    class ListOfPredicateOnListViewModel<T>
     {
-        private ObservableCollection<PredicateOnListViewModel> predicatesOnListViewModel = new ObservableCollection<PredicateOnListViewModel>();
+        private ObservableCollection<PredicateOnListViewModel<T>> predicatesOnListViewModel = new ObservableCollection<PredicateOnListViewModel<T>>();
 
-        public ObservableCollection<PredicateOnListViewModel> PredicatesOnListViewModel
+        public ObservableCollection<PredicateOnListViewModel<T>> PredicatesOnListViewModel
         {
             get { return this.predicatesOnListViewModel; }
             set { this.predicatesOnListViewModel = value; }
@@ -19,17 +19,17 @@ namespace ChaisesMusicales
         public ListOfPredicateOnListViewModel()
         {
             
-            List<IPredicateOnList<int>> predicateList = PredicateManager.getListPredicates();
-            foreach (PredicateOnList<int> p in predicateList)
+            List<IPredicateOnList<predicate>> predicateList = PredicateManager.getListPredicates();
+            foreach (PredicateOnList<T> p in predicateList)
             {
-                PredicatesOnListViewModel.Add(new PredicateOnListViewModel(p));
+                PredicatesOnListViewModel.Add(new PredicateOnListViewModel<T>(p));
             }
         }
 
-        internal List<IPredicateOnList<int>> getListPredicates()
+        internal List<IPredicateOnList<T>> getListPredicates()
         {
-            List<IPredicateOnList<int>> predicates = new List<IPredicateOnList<int>>();
-            foreach (PredicateOnListViewModel pvm in predicatesOnListViewModel)
+            List<IPredicateOnList<T>> predicates = new List<IPredicateOnList<T>>();
+            foreach (PredicateOnListViewModel<T> pvm in predicatesOnListViewModel)
             {
                 predicates.Add(pvm.Predicate);
 

@@ -11,7 +11,7 @@ namespace ChaisesMusicales
 {
     public class SalleViewModel:IRandomizeList
     {
-        private ListOfPredicateOnListViewModel predicates=new ListOfPredicateOnListViewModel();
+        private ListOfPredicateOnListViewModel<predicate> predicates=new ListOfPredicateOnListViewModel<predicate>();
         private SalleManager salleManager = new SalleManager();
         private ObservableCollection<ChaiseViewModel> chaisesViewModel = new ObservableCollection<ChaiseViewModel>();
 
@@ -31,7 +31,7 @@ namespace ChaisesMusicales
 
         public void randomizeList()
         {
-            IListRandomizer<ChaiseViewModel,int> randl = new IntListRandomizer<ChaiseViewModel>(chaisesViewModel.Count);
+            IListRandomizer<ChaiseViewModel,predicate> randl = new IntListRandomizer<ChaiseViewModel>(chaisesViewModel.Count);
             List<ChaiseViewModel> cvm = randl.randomizeList(chaisesViewModel.ToList(),predicates.getListPredicates());
          
            
