@@ -7,16 +7,18 @@ using System.Threading.Tasks;
 namespace ChaisesMusicales
 {
     public delegate bool predicate(IList<int> predicate);
+    public delegate bool predicateList(IList<List<int>> predicate);
+
     public class PredicateOnList<T>:IPredicateOnList<T>
     {
-        private predicate realPredicate;
+        private T realPredicate;
 
-        public PredicateOnList(predicate realPredicate)
+        public PredicateOnList(T realPredicate)
         {
             this.realPredicate = realPredicate;
         }
 
-        public predicate RealPredicate
+        public T RealPredicate
         {
             get
             {

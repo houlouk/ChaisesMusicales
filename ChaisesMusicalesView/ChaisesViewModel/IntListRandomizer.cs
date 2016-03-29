@@ -5,7 +5,7 @@ using System.Linq;
 //test git
 namespace ChaisesMusicales
 {
-    internal class IntListRandomizer<T>:IListRandomizer<T,int>
+    internal class IntListRandomizer<T>:IListRandomizer<T,predicate>
     {
         private int count;
 
@@ -14,7 +14,7 @@ namespace ChaisesMusicales
             this.count = count;
         }
 
-        public List<T> randomizeList(List<T> list,List<IPredicateOnList<int>> predicates)
+        public List<T> randomizeList(List<T> list,List<IPredicateOnList<predicate>> predicates)
         {
             List<int> mixIntegers = mixNIntegers(predicates);
             List<T> cvm = new List<T>();
@@ -28,7 +28,7 @@ namespace ChaisesMusicales
 
         }
 
-        private List<int> mixNIntegers(List<IPredicateOnList<int>> predicates)
+        private List<int> mixNIntegers(List<IPredicateOnList<predicate>> predicates)
         {
             List<int> mixIntegers = new List<int>();
 
@@ -39,12 +39,12 @@ namespace ChaisesMusicales
 
             for (int i = 0; i < count; i++)
             {
+                ISet<int> vtab = new SortedSet<int>();
                 do
                 {
-
+                    if (vtab.Count == count) { mixIntegers.Clear(); i = 0; } 
                     v = rnd.Next(0, count);
-
-
+                    vtab.Add(v);
                 }
                 //TO CHANGE
                 while (v == i || mixIntegers.Contains(v) || !predicates.TrueForAll(p => p.RealPredicate(mixIntegers.Concat(new List<int>() { v }).ToList())));

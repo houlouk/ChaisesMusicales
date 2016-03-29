@@ -14,13 +14,13 @@ namespace ChaisesMusicales
 
        
 
-        public static List<IPredicateOnList<int>> getListPredicates()
+        public static List<IPredicateOnList<predicate>> getListPredicates()
         {
-            List<IPredicateOnList<int>> predicates = new List<IPredicateOnList<int>>();
+            List<IPredicateOnList<predicate>> predicates = new List<IPredicateOnList<predicate>>();
 
 
-            predicates.Add(new PredicateOnList<int>(atLeast2LessForNext));
-            predicates.Add(new PredicateOnList<int>(atLeast2MoreForNext));
+            predicates.Add(new PredicateOnList<predicate>(atLeast2LessForNext));
+            predicates.Add(new PredicateOnList<predicate>(atLeast2MoreForNext));
 
             return predicates;
         }

@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace ChaisesMusicales
 {
-    class PredicateOnListViewModel:ObservableObject
+    class PredicateOnListViewModel<T>:ObservableObject
 
     {
-        private PredicateOnList<int> predicate;
-        public PredicateOnListViewModel(PredicateOnList<int> predicate)
+        private PredicateOnList<T> predicate;
+        public PredicateOnListViewModel(PredicateOnList<T> predicate)
         {
             this.predicate = predicate;
         }
 
-        public PredicateOnList<int> Predicate
+        public PredicateOnList<T> Predicate
         {
             get
             {
@@ -29,7 +29,7 @@ namespace ChaisesMusicales
             }
         }
 
-        public predicate PredicateFunc
+        public T PredicateFunc
         {
             get { return Predicate.RealPredicate; }
             set
