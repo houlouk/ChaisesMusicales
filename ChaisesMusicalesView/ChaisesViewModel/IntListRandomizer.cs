@@ -39,9 +39,12 @@ namespace ChaisesMusicales
 
             for (int i = 0; i < count; i++)
             {
+                ISet<int> vtab = new SortedSet<int>();
                 do
                 {
+                    if (vtab.Count == count) { mixIntegers.Clear(); i = 0; } 
                     v = rnd.Next(0, count);
+                    vtab.Add(v);
                 }
                 //TO CHANGE
                 while (v == i || mixIntegers.Contains(v) || !predicates.TrueForAll(p => p.RealPredicate(mixIntegers.Concat(new List<int>() { v }).ToList())));
