@@ -41,10 +41,15 @@ namespace ChaisesMusicales
             {
                 do
                 {
+
                     v = rnd.Next(0, count);
+
+
                 }
                 //TO CHANGE
                 while (v == i || mixIntegers.Contains(v) || !predicates.TrueForAll(p => p.RealPredicate(mixIntegers.Concat(new List<int>() { v }).ToList())));
+
+                Console.Out.WriteLine(v);
 
                 mixIntegers.Add(v);
             }
