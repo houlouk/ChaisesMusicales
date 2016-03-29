@@ -32,7 +32,7 @@ namespace ChaisesMusicales
         public void randomizeList()
         {
             IListRandomizer<ChaiseViewModel,int> randl = new IntListRandomizer<ChaiseViewModel>(chaisesViewModel.Count);
-            List<ChaiseViewModel> cvm = randl.mixNFirstIntegers(chaisesViewModel,predicates.getListPredicates());
+            List<ChaiseViewModel> cvm = randl.randomizeList(chaisesViewModel.ToList(),predicates.getListPredicates());
          
            
             this.chaisesViewModel.Clear();

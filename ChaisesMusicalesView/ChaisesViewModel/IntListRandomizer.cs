@@ -14,7 +14,7 @@ namespace ChaisesMusicales
             this.count = count;
         }
 
-        public List<T> mixNFirstIntegers(ObservableCollection<T> list,List<IPredicateOnList<int>> predicates)
+        public List<T> randomizeList(List<T> list,List<IPredicateOnList<int>> predicates)
         {
             List<int> mixIntegers = new List<int>();
 
