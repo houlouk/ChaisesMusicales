@@ -16,6 +16,20 @@ namespace ChaisesMusicales
 
         public List<T> randomizeList(List<T> list,List<IPredicateOnList<int>> predicates)
         {
+            List<int> mixIntegers = mixNIntegers(predicates);
+            List<T> cvm = new List<T>();
+            foreach (int i in mixIntegers)
+            {
+                cvm.Add(list[i]);
+
+            }
+
+            return cvm;
+
+        }
+
+        private List<int> mixNIntegers(List<IPredicateOnList<int>> predicates)
+        {
             List<int> mixIntegers = new List<int>();
 
 
@@ -35,15 +49,11 @@ namespace ChaisesMusicales
                 mixIntegers.Add(v);
             }
 
-            List<T> cvm = new List<T>();
-            foreach (int i in mixIntegers)
-            {
-                cvm.Add(list[i]);
+            return mixIntegers;
 
-            }
-
-            return cvm;
 
         }
+
+
     }
     }
