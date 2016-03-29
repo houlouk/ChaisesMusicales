@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 //test git
 namespace ChaisesMusicales
 {
-    internal class IntListRandomizer:IListRandomizer<int>
+    internal class IntListRandomizer<T>:IListRandomizer<T,int>
     {
         private int count;
 
@@ -13,7 +14,7 @@ namespace ChaisesMusicales
             this.count = count;
         }
 
-        public List<int> randomizeList(List<IPredicateOnList<int>> predicates)
+        public List<T> mixNFirstIntegers(ObservableCollection<T> list,List<IPredicateOnList<int>> predicates)
         {
             List<int> mixIntegers = new List<int>();
 
@@ -34,7 +35,14 @@ namespace ChaisesMusicales
                 mixIntegers.Add(v);
             }
 
-            return mixIntegers;
+            List<T> cvm = new List<T>();
+            foreach (int i in mixIntegers)
+            {
+                cvm.Add(list[i]);
+
+            }
+
+            return cvm;
 
         }
     }

@@ -31,14 +31,9 @@ namespace ChaisesMusicales
 
         public void randomizeList()
         {
-            IListRandomizer<int> randl = new IntListRandomizer(chaisesViewModel.Count);
-            List<int> indexes = randl.randomizeList(predicates.getListPredicates());
-            ObservableCollection<ChaiseViewModel> cvm = new ObservableCollection<ChaiseViewModel>();
-            foreach (int i in indexes)
-            {
-                cvm.Add(new ChaiseViewModel(chaisesViewModel[i].Chaise));
-                
-            }
+            IListRandomizer<ChaiseViewModel,int> randl = new IntListRandomizer<ChaiseViewModel>(chaisesViewModel.Count);
+            List<ChaiseViewModel> cvm = randl.mixNFirstIntegers(chaisesViewModel,predicates.getListPredicates());
+         
            
             this.chaisesViewModel.Clear();
             foreach (ChaiseViewModel vm in cvm)
