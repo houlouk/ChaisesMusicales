@@ -4,7 +4,7 @@ namespace ChaisesMusicales
 {
     public interface IPredicateOnList<T>
     {
-         predicate RealPredicate
+         T RealPredicate
         {
             get;
 
