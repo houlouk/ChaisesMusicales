@@ -3,24 +3,24 @@ using System.Collections.Generic;
 
 namespace ChaisesMusicales
 {
-    public  class PredicateManager:IPredicateManager<predicate>
+    public  class PredicateManager:IPredicateManager<Predicate<List<int>>>
     {
 
-        static predicate atLeast2MoreForNext = atLeast2MoreForNextMethod;
+        static Predicate<List<int>> atLeast2MoreForNext = atLeast2MoreForNextMethod;
+
+        
+
+        static Predicate<List<int>> atLeast2LessForNext = atLeast2LessForNextMethod;
 
        
 
-        static predicate atLeast2LessForNext = atLeast2LessForNextMethod;
-
-       
-
-        public  List<IPredicateOnList<predicate>> getListPredicates()
+        public  List<Predicate<List<int>>> getListPredicates()
         {
-            List<IPredicateOnList<predicate>> predicates = new List<IPredicateOnList<predicate>>();
+            List<Predicate<List<int>>> predicates = new List<Predicate<List<int>>>();
 
 
-            predicates.Add(new PredicateOnList<predicate>(atLeast2LessForNext));
-            predicates.Add(new PredicateOnList<predicate>(atLeast2MoreForNext));
+            predicates.Add(atLeast2LessForNext);
+            predicates.Add(atLeast2MoreForNext);
 
             return predicates;
         }

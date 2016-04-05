@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:ChaisesMusicales"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-   <Window.DataContext>
-        <local />
-    </Window.DataContext>
+   <!--<Window.DataContext>
+        <local: />
+    </Window.DataContext>-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

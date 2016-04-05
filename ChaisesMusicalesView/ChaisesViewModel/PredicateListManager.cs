@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace ChaisesMusicales
 {
-    internal class PredicateListManager : IPredicateManager<predicateList>
+    internal class PredicateListManager : IPredicateManager<List<int>>
     {
-        public List<IPredicateOnList<predicateList>> getListPredicates()
+        public List<List<int>> getListPredicates()
         {
             throw new NotImplementedException();
         }

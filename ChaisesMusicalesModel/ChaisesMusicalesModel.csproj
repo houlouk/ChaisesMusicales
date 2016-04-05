@@ -43,9 +43,7 @@
     <Compile Include="Chaise.cs" />
     <Compile Include="ChaisePlacee.cs" />
     <Compile Include="IPredicateManager.cs" />
-    <Compile Include="IPredicateOnList.cs" />
     <Compile Include="PredicateManager.cs" />
-    <Compile Include="PredicateOnList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalleManager.cs" />
   </ItemGroup>

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+
 //test git
 namespace ChaisesMusicales
 {
-    internal class IntListRandomizer<T>:IListRandomizer<T,predicate>
+    internal class IntListRandomizer<T>:IListRandomizer<T,Predicate<List<int>>>
     {
 
-
-        public List<T> randomizeList(List<T> list,List<IPredicateOnList<predicate>> predicates)
+        public List<T> randomizeList(List<T> list,List<Predicate<List<int>>> predicates)
         {
             List<int> mixIntegers = mixNIntegers(predicates, list.Count());
             List<T> cvm = new List<T>();
@@ -23,7 +23,7 @@ namespace ChaisesMusicales
 
         }
 
-        private List<int> mixNIntegers(List<IPredicateOnList<predicate>> predicates,int count)
+        private List<int> mixNIntegers(List<Predicate<List<int>>> predicates,int count)
         {
             List<int> mixIntegers = new List<int>();
 
@@ -42,7 +42,7 @@ namespace ChaisesMusicales
                     vtab.Add(v);
                 }
                 //TO CHANGE
-                while (v == i || mixIntegers.Contains(v) || !predicates.TrueForAll(p => p.RealPredicate(mixIntegers.Concat(new List<int>() { v }).ToList())));
+                while (v == i || mixIntegers.Contains(v) || !predicates.TrueForAll(p => p(mixIntegers.Concat(new List<int>() { v }).ToList())));
 
                 Console.Out.WriteLine(v);
 
@@ -56,4 +56,6 @@ namespace ChaisesMusicales
 
 
     }
+
+
     }

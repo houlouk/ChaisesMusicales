@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChaisesMusicales
 {
-    class ListOfPredicateOnListViewModel<T>:IListOfPredicateOnListViewModel<T>
+    class ListOfPredicateOnListViewModel<T,U>:IListOfPredicateOnListViewModel<T>
     {
         private ObservableCollection<PredicateOnListViewModel<T>> predicatesOnListViewModel = new ObservableCollection<PredicateOnListViewModel<T>>();
            
@@ -18,17 +18,17 @@ namespace ChaisesMusicales
         }
         public ListOfPredicateOnListViewModel()
         {
-            IPredicateManager<T> predicateManager = PredicateFactory<T>.create(typeof(T));
-            List<IPredicateOnList<T>> predicateList = predicateManager.getListPredicates();
-            foreach (PredicateOnList<T> p in predicateList)
+            IPredicateManager<T> predicateManager = PredicateFactory<T,U>.create(typeof(T));
+            List<T> predicateList = predicateManager.getListPredicates();
+            foreach (T p in predicateList)
             {
                 PredicatesOnListViewModel.Add(new PredicateOnListViewModel<T>(p));
             }
         }
 
-        public List<IPredicateOnList<T>> getListPredicates()
+        public List<T> getListPredicates()
         {
-            List<IPredicateOnList<T>> predicates = new List<IPredicateOnList<T>>();
+            List<T> predicates = new List<T>();
             foreach (PredicateOnListViewModel<T> pvm in predicatesOnListViewModel)
             {
                 predicates.Add(pvm.Predicate);

@@ -4,6 +4,6 @@ namespace ChaisesMusicales
 {
     public interface IListOfPredicateOnListViewModel<T>
     {
-        List<IPredicateOnList<T>> getListPredicates();
+        List<T> getListPredicates();
     }
 }

@@ -10,7 +10,7 @@ namespace ChaisesMusicales
     {
         static void Main(string[] args)
         {
-            SalleViewModel<predicate> salle = new SalleViewModel<predicate>();
+            SalleViewModel<Predicate<List<int>>> salle = new SalleViewModel<Predicate<List<int>>>();
             Console.Out.WriteLine(salle);
             salle.randomizeList();
             Console.Out.WriteLine(salle);

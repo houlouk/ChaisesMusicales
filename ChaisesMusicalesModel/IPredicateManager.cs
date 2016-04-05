@@ -4,7 +4,7 @@ namespace ChaisesMusicales
 {
     public interface IPredicateManager<T>
     {
-        List<IPredicateOnList<T>> getListPredicates();
+        List<T> getListPredicates();
 
     }
 }

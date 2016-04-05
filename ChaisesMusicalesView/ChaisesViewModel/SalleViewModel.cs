@@ -34,14 +34,14 @@ namespace ChaisesMusicales
             IListOfPredicateOnListViewModel<T> predicates;
             IListRandomizer<IChaiseViewModel, T> randl;
 
-            predicates = new ListOfPredicateOnListViewModel<T>();
-            randl =PredicateFactory<T> .createIRandomizer(typeof(T)) ;
+            predicates = new ListOfPredicateOnListViewModel<T,IChaiseViewModel>();
+            randl =PredicateFactory<T,IChaiseViewModel> .createIRandomizer(typeof(T)) ;
 
             List<IChaiseViewModel> cvm = randl.randomizeList(chaisesViewModel.ToList(),predicates.getListPredicates());
          
            
             this.chaisesViewModel.Clear();
-            foreach (ChaiseViewModel vm in cvm)
+            foreach (IChaiseViewModel vm in cvm)
                 chaisesViewModel.Add(vm);
 
             
