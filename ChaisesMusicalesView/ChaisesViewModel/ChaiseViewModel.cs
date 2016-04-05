@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChaisesMusicales
 {
-    public class ChaiseViewModel:ObservableObject
+    public class ChaiseViewModel:ObservableObject,IChaiseViewModel
 
     {
         private Chaise chaise;

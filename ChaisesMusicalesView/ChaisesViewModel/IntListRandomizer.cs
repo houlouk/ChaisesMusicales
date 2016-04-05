@@ -7,16 +7,11 @@ namespace ChaisesMusicales
 {
     internal class IntListRandomizer<T>:IListRandomizer<T,predicate>
     {
-        private int count;
 
-        public IntListRandomizer(int count)
-        {
-            this.count = count;
-        }
 
         public List<T> randomizeList(List<T> list,List<IPredicateOnList<predicate>> predicates)
         {
-            List<int> mixIntegers = mixNIntegers(predicates);
+            List<int> mixIntegers = mixNIntegers(predicates, list.Count());
             List<T> cvm = new List<T>();
             foreach (int i in mixIntegers)
             {
@@ -28,7 +23,7 @@ namespace ChaisesMusicales
 
         }
 
-        private List<int> mixNIntegers(List<IPredicateOnList<predicate>> predicates)
+        private List<int> mixNIntegers(List<IPredicateOnList<predicate>> predicates,int count)
         {
             List<int> mixIntegers = new List<int>();
 

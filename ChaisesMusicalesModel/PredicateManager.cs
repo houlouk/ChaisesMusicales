@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ChaisesMusicales
 {
-    public static class PredicateManager
+    public  class PredicateManager:IPredicateManager<predicate>
     {
 
         static predicate atLeast2MoreForNext = atLeast2MoreForNextMethod;
@@ -14,7 +14,7 @@ namespace ChaisesMusicales
 
        
 
-        public static List<IPredicateOnList<predicate>> getListPredicates()
+        public  List<IPredicateOnList<predicate>> getListPredicates()
         {
             List<IPredicateOnList<predicate>> predicates = new List<IPredicateOnList<predicate>>();
 
