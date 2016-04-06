@@ -3,14 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows.Input;
 
 namespace ChaisesMusicales
 {
-    public class SalleViewModel<T>:IRandomizeList
+    public class SalleViewModel:IRandomizeList
     {
+        private IListOfPredicateOnListViewModel<Predicate<List<int>>> predicates;
+
         private SalleManager salleManager = new SalleManager();
         private ObservableCollection<IChaiseViewModel> chaisesViewModel = new ObservableCollection<IChaiseViewModel>();
 
@@ -31,11 +32,10 @@ namespace ChaisesMusicales
         public void randomizeList()
         {
 
-            IListOfPredicateOnListViewModel<T> predicates;
-            IListRandomizer<IChaiseViewModel, T> randl;
+            IListRandomizer<IChaiseViewModel, Predicate<List<int>>> randl;
 
-            predicates = new ListOfPredicateOnListViewModel<T,IChaiseViewModel>();
-            randl =PredicateFactory<T,IChaiseViewModel> .createIRandomizer(typeof(T)) ;
+            predicates = new ListOfPredicateOnListViewModel<Predicate<List<int>>,IChaiseViewModel>();
+            randl =PredicateFactory<Predicate<List<int>>,IChaiseViewModel> .createIRandomizer(typeof(Predicate<List<int>>)) ;
 
             List<IChaiseViewModel> cvm = randl.randomizeList(chaisesViewModel.ToList(),predicates.getListPredicates());
          

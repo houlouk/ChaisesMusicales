@@ -36,5 +36,10 @@ namespace ChaisesMusicales
             }
             return predicates;
         }
+
+        public void removePredicate(PredicateOnListViewModel<T> pred)
+        {
+            predicatesOnListViewModel.Remove(pred);
+        }
     }
 }

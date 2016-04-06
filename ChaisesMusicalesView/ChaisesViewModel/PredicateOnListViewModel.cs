@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ChaisesMusicales
 {
-    class PredicateOnListViewModel<T>:ObservableObject
+   public class PredicateOnListViewModel<T>:ObservableObject
 
     {
         private T predicate;

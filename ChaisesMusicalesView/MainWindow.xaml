@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:ChaisesMusicales"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-   <!--<Window.DataContext>
-        <local: />
-    </Window.DataContext>-->
+   <Window.DataContext>
+        <local:SalleViewModel />
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -32,6 +32,17 @@
                     <StackPanel Orientation="Horizontal">
                         <Label Content="{Binding ChaiseName}" />
                        
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ListView Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="4" ItemsSource="{Binding ChaisesViewModel}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="{Binding ChaiseName}" />
+
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
