@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:ChaisesMusicales"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Window.DataContext>
-        <local:SalleViewModel />
-    </Window.DataContext>
+   <!--<Window.DataContext>
+        <local: />
+    </Window.DataContext>-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -22,9 +22,9 @@
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" Content="Chaises musicales" />
+        <Label Grid.Column="0" Grid.Row="0" Content="Example 6 - collection" />
         
-        <Button Grid.Column="2" Grid.Row="1" Content="Randomize salle" Command="{Binding RandomizeSalle}" />
+        <Button Grid.Column="2" Grid.Row="1" Content="Update Artist" Command="{Binding RandomizeSalle}" />
 
         <ListView Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="4" ItemsSource="{Binding ChaisesViewModel}" >
             <ListView.ItemTemplate>

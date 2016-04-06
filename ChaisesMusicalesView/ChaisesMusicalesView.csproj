@@ -79,10 +79,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ChaisesViewModel\ChaiseViewModel.cs" />
+    <Compile Include="ChaisesViewModel\IChaiseViewModel.cs" />
     <Compile Include="ChaisesViewModel\IIntListRandomizer.cs" />
+    <Compile Include="ChaisesViewModel\IListOfPredicateOnListViewModel.cs" />
     <Compile Include="ChaisesViewModel\IntListRandomizer.cs" />
     <Compile Include="ChaisesViewModel\IRandomize.cs" />
     <Compile Include="ChaisesViewModel\ListOfPredicateOnListViewModel.cs" />
+    <Compile Include="ChaisesViewModel\PredicateFactory.cs" />
+    <Compile Include="ChaisesViewModel\PredicateListManager.cs" />
     <Compile Include="ChaisesViewModel\PredicateOnListViewModel.cs" />
     <Compile Include="ChaisesViewModel\SalleViewModel.cs" />
     <Compile Include="ChaisesViewModel\IntIntListRandomizer.cs" />

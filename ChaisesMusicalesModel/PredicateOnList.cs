@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChaisesMusicales
 {
-    public delegate bool predicate(IList<int> predicate);
-    public delegate bool predicateList(IList<List<int>> predicate);
+    
 
     public class PredicateOnList<T>:IPredicateOnList<T>
     {

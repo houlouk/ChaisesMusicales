@@ -10,13 +10,13 @@ namespace ChaisesMusicales
     class PredicateOnListViewModel<T>:ObservableObject
 
     {
-        private PredicateOnList<T> predicate;
-        public PredicateOnListViewModel(PredicateOnList<T> predicate)
+        private T predicate;
+        public PredicateOnListViewModel(T predicate)
         {
             this.predicate = predicate;
         }
 
-        public PredicateOnList<T> Predicate
+        public T Predicate
         {
             get
             {
@@ -31,10 +31,10 @@ namespace ChaisesMusicales
 
         public T PredicateFunc
         {
-            get { return Predicate.RealPredicate; }
+            get { return predicate; }
             set
             {
-                Predicate.RealPredicate = value;
+                predicate = value;
                 RaisePropertyChanged("RealPredicateFunc");
             }
         }

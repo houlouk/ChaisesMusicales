@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ChaisesMusicalesModel\ChaisesMusicalesModel.csproj">
+      <Project>{c0b8c303-2a5e-4ed8-a871-ba37e4ca8b5e}</Project>
+      <Name>ChaisesMusicalesModel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ChaisesMusicalesView\ChaisesMusicalesView.csproj">
       <Project>{d5d1cd1e-865b-49f8-8794-9cf97ed306f8}</Project>
       <Name>ChaisesMusicalesView</Name>
